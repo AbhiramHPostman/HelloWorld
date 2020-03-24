@@ -17,6 +17,19 @@
         "url": "https://www.postman-echo.com/get"
       },
       "response": []
+    },
+    {
+      "name": "Two",
+      "_postman_id": "42eb5e6d-8f0c-42a6-b180-6f836df80f95",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": ""
+      },
+      "response": []
     }
   ]
 }
