@@ -30,7 +30,8 @@
           {
             "key": "x-api-key",
             "value": "test",
-            "type": "text"
+            "type": "text",
+            "disabled": true
           }
         ],
         "url": "https://www.postman-echo.com/get"
