@@ -26,7 +26,13 @@
       },
       "request": {
         "method": "GET",
-        "header": [],
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "test",
+            "type": "text"
+          }
+        ],
         "url": "https://www.postman-echo.com/get"
       },
       "response": []
