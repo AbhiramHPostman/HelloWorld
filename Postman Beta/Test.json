@@ -48,8 +48,7 @@
           {
             "key": "x-api-key",
             "value": "test",
-            "type": "text",
-            "disabled": true
+            "type": "text"
           },
           {
             "key": "response-code",
