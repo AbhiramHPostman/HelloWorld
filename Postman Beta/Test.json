@@ -20,6 +20,24 @@
     },
     {
       "name": "Two",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "4d10661d-0fa0-4ee2-b92d-1c06e1dfc8d3",
+            "exec": [
+              "pm.sendRequest({",
+              "    url: 'https://postman-echo.com/get',",
+              "    method: 'GET'",
+              "}, (err, res) => {",
+              "    console.log(JSON.stringify({err, res}));",
+              "    console.log(res.text())",
+              "})"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "42eb5e6d-8f0c-42a6-b180-6f836df80f95",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -30,7 +48,33 @@
           {
             "key": "x-api-key",
             "value": "test",
+            "type": "text",
+            "disabled": true
+          },
+          {
+            "key": "response-code",
+            "value": "201",
             "type": "text"
+          }
+        ],
+        "url": "https://www.postman-echo.com/get"
+      },
+      "response": []
+    },
+    {
+      "name": "Two Copy",
+      "_postman_id": "08a01cac-bd0a-46bd-8be5-da4c668e618e",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "test",
+            "type": "text",
+            "disabled": true
           }
         ],
         "url": "https://www.postman-echo.com/get"
