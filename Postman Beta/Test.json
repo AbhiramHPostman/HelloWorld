@@ -32,7 +32,14 @@
               "}, (err, res) => {",
               "    console.log(JSON.stringify({err, res}));",
               "    console.log(res.text())",
-              "})"
+              "})",
+              "",
+              "let contentLength = pm.response.headers.get('Content-Length');",
+              "console.log(typeof contentLength)",
+              "console.log(contentLength)",
+              "",
+              "const moment = require('moment')",
+              "console.log(moment('1372700873'))"
             ],
             "type": "text/javascript"
           }
