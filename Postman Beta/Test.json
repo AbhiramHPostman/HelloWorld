@@ -14,7 +14,25 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "https://www.postman-echo.com/get"
+        "url": {
+          "raw": "https://www.postman-echo.com/get?name=bonf",
+          "protocol": "https",
+          "host": [
+            "www",
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "bonf",
+              "type": "text"
+            }
+          ]
+        }
       },
       "response": []
     },
