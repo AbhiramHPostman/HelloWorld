@@ -14,7 +14,16 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": ""
+        "url": {
+          "raw": "?asd=asd",
+          "query": [
+            {
+              "key": "asd",
+              "value": "asd",
+              "type": "text"
+            }
+          ]
+        }
       },
       "response": []
     }
