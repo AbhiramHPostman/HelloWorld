@@ -1,0 +1,22 @@
+{
+  "info": {
+    "_postman_id": "db0c69a7-551c-41fd-b5a7-25543f59950d",
+    "name": "use and throw",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "throw",
+      "_postman_id": "f9c729d2-3235-43bd-9a8e-253034a5f499",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": ""
+      },
+      "response": []
+    }
+  ]
+}
