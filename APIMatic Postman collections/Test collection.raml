@@ -1,0 +1,79 @@
+#%RAML 1.0
+title: Test collection
+version: 1.0
+baseUri: https://postman-echo.com
+baseUriParameters: {}
+protocols:
+- HTTPS
+types:
+  EchoRequest:
+    example:
+      value:
+        webhook:
+          name: Test Webhook
+          collection: '{{collection_id}}'
+          environment: '{{environment_id}}'
+    displayName: EchoRequest
+    type: object
+    properties:
+      webhook:
+        required: true
+        displayName: webhook
+        type: Webhook
+  Webhook:
+    example:
+      value:
+        name: Test Webhook
+        collection: '{{collection_id}}'
+        environment: '{{environment_id}}'
+    displayName: Webhook
+    type: object
+    properties:
+      name:
+        required: true
+        displayName: name
+        type: string
+      collection:
+        required: true
+        displayName: collection
+        type: string
+      environment:
+        required: true
+        displayName: environment
+        type: string
+/post:
+  post:
+    displayName: Echo
+    body:
+      application/json:
+        example:
+          value:
+            webhook:
+              name: Test Webhook
+              collection: '{{collection_id}}'
+              environment: '{{environment_id}}'
+        displayName: Body
+        type: EchoRequest
+    headers:
+      Content-Type:
+        required: true
+        example:
+          value: application/json
+        displayName: Content-Type
+        type: string
+    responses:
+      200:
+        description: Success
+/test:
+  get:
+    displayName: Two
+    queryParameters:
+      name:
+        required: true
+        example:
+          value: bond
+        displayName: name
+        type: string
+    responses:
+      200:
+        description: Success
