@@ -1,6 +1,9 @@
 #%RAML 0.8
 title: My Collection
 version: 1.0
+documentation:
+- title: My Collection
+  content: This is a test collection.
 baseUri: https://www.example.com
 protocols:
 - HTTPS
