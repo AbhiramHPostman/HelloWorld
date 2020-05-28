@@ -16,7 +16,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://www.postman-echo.com/get?param1=value1",
+          "raw": "https://www.postman-echo.com/get",
           "protocol": "https",
           "host": [
             "www",
@@ -29,7 +29,8 @@
           "query": [
             {
               "key": "param1",
-              "value": "value1"
+              "value": "value1",
+              "disabled": true
             }
           ]
         }
