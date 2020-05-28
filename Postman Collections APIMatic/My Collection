@@ -13,9 +13,3 @@ baseUriParameters: {}
     responses:
       200:
         description: Success
-    queryParameters:
-      param1:
-        type: string
-        example: value1
-        required: true
-        displayName: param1
