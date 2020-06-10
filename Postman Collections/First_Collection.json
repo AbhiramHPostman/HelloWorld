@@ -131,7 +131,7 @@
           }
         },
         "url": {
-          "raw": "https://webtopup.bmrc.co.in/MyAccount/RegisterCard.aspx",
+          "raw": "https://webtopup.bmrc.co.in/MyAccount/RegisterCard.aspx?test=as",
           "protocol": "https",
           "host": [
             "webtopup",
@@ -146,8 +146,7 @@
           "query": [
             {
               "key": "test",
-              "value": "as",
-              "disabled": true
+              "value": "as"
             }
           ]
         },
