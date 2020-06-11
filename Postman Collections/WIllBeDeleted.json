@@ -1,110 +1,26 @@
 {
   "info": {
-    "_postman_id": "067ab83d-62e9-4217-b9c6-9f5be399bc3f",
-    "name": "Test collection",
+    "_postman_id": "3c1e8025-4133-42f1-92ce-2ad0bc10b4ca",
+    "name": "Test",
+    "description": "test",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
     {
-      "name": "Echo",
+      "name": "Get",
       "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "868bc92e-2081-410a-93c5-8fcfb0411739",
-            "exec": [
-              "var prevReqData = globals.previousRequest && JSON.parse(globals.previousRequest).data;",
-              "",
-              "pm.globals.set('integration_run_access_token', 'abcdxyz1234567890');",
-              "",
-              "pm.sendRequest('https://gist.githubusercontent.com/AbhiramHPostman/82f9f463cc9f080e64a681c2b01439da/raw/1dd4c5f515430ff7954590a1a6729bb5e20d9799/integrationRunTest.js', function (err, res) {",
-              "    if (err) {",
-              "        console.log(err);",
-              "    } else {",
-              "        pm.globals.set(\"integrationRunLib\", res.text());",
-              "    }",
-              "});",
-              "",
-              ""
-            ],
-            "type": "text/javascript"
-          }
-        },
         {
           "listen": "test",
           "script": {
-            "id": "f30735d5-e40f-46e1-9970-db6649ba4b7a",
+            "id": "a6e3d4e7-93b8-4954-955c-c6b3556e390d",
             "exec": [
-              "// let int = `",
-              "// pm.integrations = {",
-              "//   started: function () {",
-              "//     console.log(\"STAAAART\");",
-              "//     console.log(pm.info.eventName);",
-              "//   }",
-              "//  }",
-              "// `;",
-              "",
-              "// pm.integrations = eval(pm.globals.get('integrationRunLib'));",
-              "// eval(int);",
-              "eval(pm.globals.get('integrationRunLib'));",
-              "",
-              "pm.integration.started();",
-              "",
-              "",
-              ""
+              "pm.expect(pm.response.code).to.equal(200);"
             ],
             "type": "text/javascript"
           }
         }
       ],
-      "_postman_id": "4cfdd763-25e2-4038-9d3f-b945158cd529",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n\t\"webhook\": {\n\t\t\"name\": \"Test Webhook\",\n\t\t\"collection\": \"{{collection_id}}\",\n\t\t\"environment\": \"{{environment_id}}\"\n\t}\n}",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": "https://postman-echo.com/post"
-      },
-      "response": []
-    },
-    {
-      "name": "Two",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "9febdff1-fe5d-4f5b-91bb-4815c228ad95",
-            "exec": [
-              "let prevReqData = globals.previousRequest && JSON.parse(globals.previousRequest).data;",
-              "",
-              "console.log(prevReqData);",
-              "",
-              "eval(pm.globals.get('integrationRunLib'));",
-              "",
-              "pm.integration.failed('hey', prevReqData);"
-            ],
-            "type": "text/javascript"
-          }
-        }
-      ],
-      "_postman_id": "ea817167-5167-47eb-8710-3e88a4817a0a",
+      "_postman_id": "1d15a542-6258-46f1-b001-2e117a3f62b4",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -112,53 +28,26 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://postman-echo.com/test",
+          "raw": "https://www.postman-echo.com/get?name=bond",
           "protocol": "https",
           "host": [
+            "www",
             "postman-echo",
             "com"
           ],
           "path": [
-            "test"
+            "get"
           ],
           "query": [
             {
               "key": "name",
               "value": "bond",
-              "disabled": true
+              "type": "text"
             }
           ]
         }
       },
       "response": []
-    }
-  ],
-  "event": [
-    {
-      "listen": "prerequest",
-      "script": {
-        "id": "c2b5caae-68b7-4957-8782-9fd9da05d00f",
-        "type": "text/javascript",
-        "exec": [
-          ""
-        ]
-      }
-    },
-    {
-      "listen": "test",
-      "script": {
-        "id": "b082c094-a6bd-4e54-9821-c5146425eff5",
-        "type": "text/javascript",
-        "exec": [
-          "let prevReqData = globals.previousRequest && JSON.parse(globals.previousRequest).data;",
-          "",
-          "console.log(prevReqData);",
-          "",
-          "eval(pm.globals.get('integrationRunLib'));",
-          "",
-          "pm.integration.failed('hey', prevReqData);"
-        ]
-      }
     }
   ]
 }
