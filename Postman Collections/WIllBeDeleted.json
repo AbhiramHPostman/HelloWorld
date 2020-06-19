@@ -1,0 +1,109 @@
+{
+  "info": {
+    "_postman_id": "b450fc43-9ace-410e-8908-d1472c6d9940",
+    "name": "First",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get",
+      "_postman_id": "cf0ddf46-8940-4309-951d-314fadf1496a",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://www.postman-echo.com/get?name=bonf",
+          "protocol": "https",
+          "host": [
+            "www",
+            "postman-echo",
+            "com"
+          ],
+          "path": [
+            "get"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "bonf",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Two",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "82b513b7-a4c5-4503-89a4-8bd99b942fde",
+            "exec": [
+              "pm.sendRequest({",
+              "    url: 'https://postman-echo.com/get',",
+              "    method: 'GET'",
+              "}, (err, res) => {",
+              "    console.log(JSON.stringify({err, res}));",
+              "    console.log(res.text())",
+              "})",
+              "",
+              "let contentLength = pm.response.headers.get('Content-Length');",
+              "console.log(typeof contentLength)",
+              "console.log(contentLength)",
+              "",
+              "",
+              "console.log('time: ' + (new Date(Number('1372700873')*1000)).toUTCString())"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "42eb5e6d-8f0c-42a6-b180-6f836df80f95",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "test",
+            "type": "text"
+          },
+          {
+            "key": "response-code",
+            "value": "201",
+            "type": "text"
+          }
+        ],
+        "url": "https://www.postman-echo.com/get"
+      },
+      "response": []
+    },
+    {
+      "name": "Two Copy",
+      "_postman_id": "08a01cac-bd0a-46bd-8be5-da4c668e618e",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "test",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": "https://www.postman-echo.com/get"
+      },
+      "response": []
+    }
+  ]
+}
