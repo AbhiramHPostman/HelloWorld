@@ -1,0 +1,91 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Test collection
+  description: Test
+  contact: {}
+host: postman-echo.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /post:
+    post:
+      summary: Echo
+      tags:
+      - Misc
+      operationId: Echo
+      deprecated: false
+      produces:
+      - application/json
+      consumes:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/EchoRequest'
+      responses:
+        200:
+          description: ''
+          headers: {}
+  /test:
+    get:
+      summary: Two
+      tags:
+      - Misc
+      operationId: Two
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+          headers: {}
+definitions:
+  EchoRequest:
+    title: EchoRequest
+    example:
+      webhook:
+        name: Test Webhook
+        collection: '{{collection_id}}'
+        environment: '{{environment_id}}'
+    type: object
+    properties:
+      webhook:
+        $ref: '#/definitions/Webhook'
+    required:
+    - webhook
+  Webhook:
+    title: Webhook
+    example:
+      name: Test Webhook
+      collection: '{{collection_id}}'
+      environment: '{{environment_id}}'
+    type: object
+    properties:
+      name:
+        type: string
+      collection:
+        type: string
+      environment:
+        type: string
+    required:
+    - name
+    - collection
+    - environment
+tags:
+- name: Misc
+  description: ''
