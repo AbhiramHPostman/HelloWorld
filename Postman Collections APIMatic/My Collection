@@ -6,7 +6,7 @@ documentation:
   content: |
     This is a test collection!!
 
-    Testing the webhook beta url :tada:
+    Testing the webhook beta url
 baseUri: https://www.postman-echo.com
 protocols:
 - HTTPS
