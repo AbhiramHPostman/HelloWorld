@@ -3,7 +3,10 @@ title: My Collection
 version: 1.0
 documentation:
 - title: My Collection
-  content: This is a test collection!!
+  content: |
+    This is a test collection!!
+
+    Testing the webhook beta url :tada:
 baseUri: https://www.postman-echo.com
 protocols:
 - HTTPS
