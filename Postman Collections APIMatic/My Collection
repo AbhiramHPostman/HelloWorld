@@ -8,7 +8,7 @@ documentation:
 
     Testing the webhook beta url :tada:
 
-    Why it didnt run ? it should now~1
+    Why it didnt run ? it should now~ ??
 baseUri: https://www.postman-echo.com
 protocols:
 - HTTPS
