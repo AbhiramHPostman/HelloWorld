@@ -113,7 +113,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://postman-echo.com/test",
+          "raw": "https://postman-echo.com/test?name=bond",
           "protocol": "https",
           "host": [
             "postman-echo",
@@ -125,8 +125,7 @@
           "query": [
             {
               "key": "name",
-              "value": "bond",
-              "disabled": true
+              "value": "bond"
             }
           ]
         }
@@ -138,7 +137,7 @@
     {
       "listen": "prerequest",
       "script": {
-        "id": "c2b5caae-68b7-4957-8782-9fd9da05d00f",
+        "id": "df56a87d-1ef4-4543-acab-1dfddabc497e",
         "type": "text/javascript",
         "exec": [
           ""
@@ -148,16 +147,10 @@
     {
       "listen": "test",
       "script": {
-        "id": "b082c094-a6bd-4e54-9821-c5146425eff5",
+        "id": "97120d04-7100-489a-a286-f615e149495d",
         "type": "text/javascript",
         "exec": [
-          "let prevReqData = globals.previousRequest && JSON.parse(globals.previousRequest).data;",
-          "",
-          "console.log(prevReqData);",
-          "",
-          "eval(pm.globals.get('integrationRunLib'));",
-          "",
-          "pm.integration.failed('hey', prevReqData);"
+          ""
         ]
       }
     }
