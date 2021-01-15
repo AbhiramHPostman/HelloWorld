@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: Test collection
-  description: Test one more
+  description: 'Test '
   contact: {}
 host: postman-echo.com
 basePath: /
@@ -49,7 +49,12 @@ paths:
       deprecated: false
       produces:
       - application/json
-      parameters: []
+      parameters:
+      - name: name
+        in: query
+        required: true
+        type: string
+        description: ''
       responses:
         200:
           description: ''
