@@ -70,6 +70,19 @@ types:
 /test:
   get:
     displayName: Two
+    queryParameters:
+      name:
+        required: true
+        example:
+          value: bond
+        displayName: name
+        type: string
+      country:
+        required: true
+        example:
+          value: 日本
+        displayName: country
+        type: string
     responses:
       200:
         description: Success
