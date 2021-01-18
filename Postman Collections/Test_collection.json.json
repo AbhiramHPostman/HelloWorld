@@ -113,7 +113,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://postman-echo.com/test?name=bond",
+          "raw": "https://postman-echo.com/test?name=bond&country=日本",
           "protocol": "https",
           "host": [
             "postman-echo",
@@ -126,6 +126,11 @@
             {
               "key": "name",
               "value": "bond"
+            },
+            {
+              "key": "country",
+              "value": "日本",
+              "type": "text"
             }
           ]
         }
