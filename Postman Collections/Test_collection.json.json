@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "067ab83d-62e9-4217-b9c6-9f5be399bc3f",
-    "name": "Test collection",
+    "name": "Test collectionn",
     "description": "Test ",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
@@ -58,7 +58,7 @@
           }
         }
       ],
-      "_postman_id": "4cfdd763-25e2-4038-9d3f-b945158cd529",
+      "id": "4cfdd763-25e2-4038-9d3f-b945158cd529",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -105,7 +105,7 @@
           }
         }
       ],
-      "_postman_id": "ea817167-5167-47eb-8710-3e88a4817a0a",
+      "id": "ea817167-5167-47eb-8710-3e88a4817a0a",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
