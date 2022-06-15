@@ -1,8 +1,8 @@
 #%RAML 0.8
-title: My Collection
-version: 1.0
+title: My Collection!
+version: '1.0'
 documentation:
-- title: My Collection
+- title: My Collection!
   content: |
     This is a test collection!!
 
@@ -15,9 +15,6 @@ protocols:
 baseUriParameters: {}
 /get:
   get:
-    responses:
-      200:
-        description: Success
     queryParameters:
       param1:
         type: string
@@ -29,3 +26,6 @@ baseUriParameters: {}
         example: value2
         required: true
         displayName: param2
+    responses:
+      '200':
+        description: Success
