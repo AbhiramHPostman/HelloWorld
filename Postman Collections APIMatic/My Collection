@@ -1,8 +1,8 @@
 #%RAML 0.8
-title: My Collection!
+title: My Collection!!!
 version: '1.0'
 documentation:
-- title: My Collection!
+- title: My Collection!!!
   content: |
     This is a test collection!!
 
